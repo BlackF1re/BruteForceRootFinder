@@ -1,0 +1,21 @@
+﻿<Window x:Class="BruteForceRootFinder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        Title="Метод Перебора" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="FunctionComboBox" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Width="200" SelectedIndex="0">
+            <ComboBoxItem Content="f1(x) = x^2 - 4"/>
+            <ComboBoxItem Content="f2(x) = x^3 - 2*x - 5"/>
+            <ComboBoxItem Content="f3(x) = sin(x) - 0.5"/>
+            <ComboBoxItem Content="f4(x) = cos(x) - x"/>
+            <ComboBoxItem Content="f5(x) = e^x - 2"/>
+        </ComboBox>
+        <Button x:Name="PlotButton" Content="Построить график" HorizontalAlignment="Left" Margin="220,10,0,0" VerticalAlignment="Top" Width="100" Click="PlotButton_Click"/>
+        <TextBox x:Name="InitialGuessTextBox" HorizontalAlignment="Left" Margin="330,10,0,0" VerticalAlignment="Top" Width="100" Text="x0"/>
+        <TextBox x:Name="StepTextBox" HorizontalAlignment="Left" Margin="440,10,0,0" VerticalAlignment="Top" Width="100" Text="h"/>
+        <Button x:Name="SolveButton" Content="Решить" HorizontalAlignment="Left" Margin="550,10,0,0" VerticalAlignment="Top" Width="100" Click="SolveButton_Click"/>
+        <oxy:PlotView x:Name="PlotView" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="760" Height="350"/>
+        <Label x:Name="SolutionLabel" Content="Решение: " HorizontalAlignment="Left" Margin="660,10,0,0" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>
